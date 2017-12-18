@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zzc-eH-fRR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="laL-z8-DTH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -62,16 +63,23 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Core ML" id="04B-Lr-BQ8">
-                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="4XK-dA-7VT">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="xJK-1L-rCy">
                             <connections>
-                                <action selector="camera:" destination="BYZ-38-t0r" id="F4n-or-mHH"/>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="hk7-Dy-wTB"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Library" style="plain" id="QWq-Ce-IzD">
-                            <connections>
-                                <action selector="openLibrary:" destination="BYZ-38-t0r" id="yRJ-NG-ET1"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Library" style="plain" id="QWq-Ce-IzD">
+                                <connections>
+                                    <action selector="openLibrary:" destination="BYZ-38-t0r" id="yRJ-NG-ET1"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="camera" id="4XK-dA-7VT">
+                                <connections>
+                                    <action selector="camera:" destination="BYZ-38-t0r" id="F4n-or-mHH"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="classifier" destination="ey9-UG-cA0" id="6tX-Tf-CTf"/>
@@ -83,6 +91,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1126" y="116"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="EG7-wr-9za">
+            <objects>
+                <tableViewController id="C3B-rY-DkR" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="w31-Sx-jjE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hzX-1p-G76">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hzX-1p-G76" id="o42-Rq-4sW">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="C3B-rY-DkR" id="tKB-o1-NlR"/>
+                            <outlet property="delegate" destination="C3B-rY-DkR" id="OX9-7d-Wsz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="History" id="Xpx-7G-RuG">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="qkT-JY-sfo">
+                            <connections>
+                                <segue destination="Zzc-eH-fRR" kind="show" id="YV2-Sd-01e"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b4F-so-FYY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-391" y="-216"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lEO-af-5MA">
+            <objects>
+                <navigationController id="laL-z8-DTH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PUm-eN-fpN">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="C3B-rY-DkR" kind="relationship" relationship="rootViewController" id="hF6-dT-dt0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dIZ-wv-pIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1154" y="-216"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8Cz-jW-KBb">
@@ -101,7 +160,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKk-li-1Z0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="456" y="116.94152923538232"/>
+            <point key="canvasLocation" x="319" y="476"/>
         </scene>
     </scenes>
 </document>

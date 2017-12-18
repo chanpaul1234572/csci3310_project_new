@@ -69,6 +69,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         }
     }
     
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+        print("cancel called\n")
+    }
 }
 
 extension ViewController: UIImagePickerControllerDelegate {
