@@ -61,7 +61,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         var params = ROGoogleTranslateParams()
         params.source = fromLanguage.text ?? "en"
         params.target = toLanguage.text ?? "zh-TW"
-        params.text = classifier.text ?? "Analyzing Image..."
+        params.text = text ?? "Analyzing Image..."
         translator.translate(params: params) { (result) in
             DispatchQueue.main.async {
                 self.classifier.text = "\(result)"
