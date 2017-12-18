@@ -14,9 +14,12 @@
 		B408E18D1FE4EEBA00027F11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B408E18B1FE4EEBA00027F11 /* LaunchScreen.storyboard */; };
 		B408E1981FE4F9B600027F11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B408E1811FE4EEBA00027F11 /* ViewController.swift */; };
 		B408E1A01FE52A7900027F11 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B408E19F1FE52A7900027F11 /* Inceptionv3.mlmodel */; };
+		B4A6630A1FE7BF1900D9F71C /* ROGoogleTranslate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A663091FE7BF1800D9F71C /* ROGoogleTranslate.swift */; };
+		C56E76DB19DD8D667FE4D9E6 /* Pods_VisionLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB893476E4A55E21B43500EB /* Pods_VisionLearning.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3ADA1CBD43AD380E84607685 /* Pods-VisionLearning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisionLearning.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VisionLearning/Pods-VisionLearning.debug.xcconfig"; sourceTree = "<group>"; };
 		B408E17C1FE4EEBA00027F11 /* VisionLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisionLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B408E17F1FE4EEBA00027F11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B408E1811FE4EEBA00027F11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +29,9 @@
 		B408E18C1FE4EEBA00027F11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B408E18E1FE4EEBA00027F11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B408E19F1FE52A7900027F11 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		B4A663091FE7BF1800D9F71C /* ROGoogleTranslate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROGoogleTranslate.swift; sourceTree = "<group>"; };
+		BE3F0D68B05B4552687F9ED3 /* Pods-VisionLearning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisionLearning.release.xcconfig"; path = "Pods/Target Support Files/Pods-VisionLearning/Pods-VisionLearning.release.xcconfig"; sourceTree = "<group>"; };
+		DB893476E4A55E21B43500EB /* Pods_VisionLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VisionLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,18 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C56E76DB19DD8D667FE4D9E6 /* Pods_VisionLearning.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92BDE2061D4E5052E7CDBE1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB893476E4A55E21B43500EB /* Pods_VisionLearning.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B408E1731FE4EEBA00027F11 = {
 			isa = PBXGroup;
 			children = (
 				B408E19F1FE52A7900027F11 /* Inceptionv3.mlmodel */,
 				B408E17E1FE4EEBA00027F11 /* VisionLearning */,
 				B408E17D1FE4EEBA00027F11 /* Products */,
+				DFC2FF6E39E7A626E9DCD0E3 /* Pods */,
+				92BDE2061D4E5052E7CDBE1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,14 +77,24 @@
 			isa = PBXGroup;
 			children = (
 				B408E17F1FE4EEBA00027F11 /* AppDelegate.swift */,
-				B408E1811FE4EEBA00027F11 /* ViewController.swift */,
-				B408E1831FE4EEBA00027F11 /* Main.storyboard */,
 				B408E1891FE4EEBA00027F11 /* Assets.xcassets */,
-				B408E18B1FE4EEBA00027F11 /* LaunchScreen.storyboard */,
 				B408E18E1FE4EEBA00027F11 /* Info.plist */,
+				B408E18B1FE4EEBA00027F11 /* LaunchScreen.storyboard */,
+				B408E1831FE4EEBA00027F11 /* Main.storyboard */,
+				B408E1811FE4EEBA00027F11 /* ViewController.swift */,
+				B4A663091FE7BF1800D9F71C /* ROGoogleTranslate.swift */,
 				B408E1861FE4EEBA00027F11 /* VisionLearning.xcdatamodeld */,
 			);
 			path = VisionLearning;
+			sourceTree = "<group>";
+		};
+		DFC2FF6E39E7A626E9DCD0E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3ADA1CBD43AD380E84607685 /* Pods-VisionLearning.debug.xcconfig */,
+				BE3F0D68B05B4552687F9ED3 /* Pods-VisionLearning.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B408E1911FE4EEBA00027F11 /* Build configuration list for PBXNativeTarget "VisionLearning" */;
 			buildPhases = (
+				FB2B826BBE1303BA06043701 /* [CP] Check Pods Manifest.lock */,
 				B408E1781FE4EEBA00027F11 /* Sources */,
 				B408E1791FE4EEBA00027F11 /* Frameworks */,
 				B408E17A1FE4EEBA00027F11 /* Resources */,
+				39AB17E939D5C2C8F876B916 /* [CP] Embed Pods Frameworks */,
+				3B849561A899F155266F8646 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,6 +167,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		39AB17E939D5C2C8F876B916 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VisionLearning/Pods-VisionLearning-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ROGoogleTranslate/ROGoogleTranslate.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ROGoogleTranslate.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VisionLearning/Pods-VisionLearning-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B849561A899F155266F8646 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VisionLearning/Pods-VisionLearning-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB2B826BBE1303BA06043701 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VisionLearning-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B408E1781FE4EEBA00027F11 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -144,6 +228,7 @@
 			files = (
 				B408E1981FE4F9B600027F11 /* ViewController.swift in Sources */,
 				B408E1A01FE52A7900027F11 /* Inceptionv3.mlmodel in Sources */,
+				B4A6630A1FE7BF1900D9F71C /* ROGoogleTranslate.swift in Sources */,
 				B408E1881FE4EEBA00027F11 /* VisionLearning.xcdatamodeld in Sources */,
 				B408E1801FE4EEBA00027F11 /* AppDelegate.swift in Sources */,
 			);
@@ -280,6 +365,7 @@
 		};
 		B408E1921FE4EEBA00027F11 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ADA1CBD43AD380E84607685 /* Pods-VisionLearning.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +381,7 @@
 		};
 		B408E1931FE4EEBA00027F11 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE3F0D68B05B4552687F9ED3 /* Pods-VisionLearning.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

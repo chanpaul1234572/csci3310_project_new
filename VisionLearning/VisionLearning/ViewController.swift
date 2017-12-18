@@ -13,6 +13,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var classifier: UILabel!
+    @IBOutlet weak var fromLanguage: UITextField!
+    @IBOutlet weak var toLanguage: UITextField!
     
     var text: String!
     var model: Inceptionv3!
@@ -51,6 +53,20 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         picker.delegate = self
         picker.sourceType = .photoLibrary
         present(picker, animated: true)
+    }
+    @IBAction func translate(_ sender: Any) {
+        let translator = ROGoogleTranslate()
+        translator.apiKey = "AIzaSyDRPYAnuiL9K7-Be3JE1888J60VgTdYHR0" // Add your API Key here
+        
+        var params = ROGoogleTranslateParams()
+        params.source = fromLanguage.text ?? "en"
+        params.target = toLanguage.text ?? "zh-TW"
+        params.text = classifier.text ?? "Analyzing Image..."
+        translator.translate(params: params) { (result) in
+            DispatchQueue.main.async {
+                self.classifier.text = "\(result)"
+            }
+        }
     }
     
 }
@@ -100,7 +116,8 @@ extension ViewController: UIImagePickerControllerDelegate {
             return
         }
         
-        classifier.text = "I think this is a \(prediction.classLabel)."
+        classifier.text = "\(prediction.classLabel)"
         text = prediction.classLabel
+        
     }
 }
