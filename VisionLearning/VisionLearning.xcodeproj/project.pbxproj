@@ -16,6 +16,7 @@
 		B408E1A01FE52A7900027F11 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B408E19F1FE52A7900027F11 /* Inceptionv3.mlmodel */; };
 		B4A6630A1FE7BF1900D9F71C /* ROGoogleTranslate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A663091FE7BF1800D9F71C /* ROGoogleTranslate.swift */; };
 		B4A6630C1FE8300A00D9F71C /* HIstoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A6630B1FE8300A00D9F71C /* HIstoryTableViewCell.swift */; };
+		B4A6630E1FE8470900D9F71C /* Thing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A6630D1FE8470900D9F71C /* Thing.swift */; };
 		C56E76DB19DD8D667FE4D9E6 /* Pods_VisionLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB893476E4A55E21B43500EB /* Pods_VisionLearning.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		B408E19F1FE52A7900027F11 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		B4A663091FE7BF1800D9F71C /* ROGoogleTranslate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROGoogleTranslate.swift; sourceTree = "<group>"; };
 		B4A6630B1FE8300A00D9F71C /* HIstoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIstoryTableViewCell.swift; sourceTree = "<group>"; };
+		B4A6630D1FE8470900D9F71C /* Thing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thing.swift; sourceTree = "<group>"; };
 		BE3F0D68B05B4552687F9ED3 /* Pods-VisionLearning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisionLearning.release.xcconfig"; path = "Pods/Target Support Files/Pods-VisionLearning/Pods-VisionLearning.release.xcconfig"; sourceTree = "<group>"; };
 		DB893476E4A55E21B43500EB /* Pods_VisionLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VisionLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -86,6 +88,7 @@
 				B408E1811FE4EEBA00027F11 /* ViewController.swift */,
 				B4A663091FE7BF1800D9F71C /* ROGoogleTranslate.swift */,
 				B4A6630B1FE8300A00D9F71C /* HIstoryTableViewCell.swift */,
+				B4A6630D1FE8470900D9F71C /* Thing.swift */,
 				B408E1861FE4EEBA00027F11 /* VisionLearning.xcdatamodeld */,
 			);
 			path = VisionLearning;
@@ -235,6 +238,7 @@
 				B4A6630A1FE7BF1900D9F71C /* ROGoogleTranslate.swift in Sources */,
 				B408E1881FE4EEBA00027F11 /* VisionLearning.xcdatamodeld in Sources */,
 				B408E1801FE4EEBA00027F11 /* AppDelegate.swift in Sources */,
+				B4A6630E1FE8470900D9F71C /* Thing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
